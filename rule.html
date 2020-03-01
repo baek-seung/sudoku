@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<title>SUDOKU.RULE</title>
+	<meta charset="utf-8">
+	<style>
+		h2 {
+			text-align:center;
+			color:green;
+			border-bottom: 3px gray solid;
+			padding-bottom: 10px;
+			margin:0;
+		}
+		a, h2{
+			text-decoration:none;
+		}
+		ol {
+			margin:0;
+			width:80px;
+			border-right: 2px gray solid;
+			padding:20px;
+		}
+		h4 {
+			margin:0;
+			padding:7px;
+			color: pink;
+		}
+		#grid{
+			display:grid;
+			grid-template-columns: 150px 1fr;
+		}
+		#ex {
+			border: 3px red solid;
+			width: 500px;
+		}
+		#create {
+			border: 3px red solid;
+			width: 500px;
+		}
+		@media (max-width:700px)
+		{
+			#ex{
+				display:grid;
+				width:1fr;
+			}
+			#create {
+				display:grid;
+				width:1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<a href="index.html"><h2>SUDOKU</h2></a>
+	<div id="grid">
+		<ol>
+			<li><a href="intro.html" class="idx"><h4>개요</h4></a></li>
+			<li><a href="rule.html" class="idx" id="imp"><h4>규칙</h4></a></li>
+			<li><a href="strategy.html" class="idx"><h4>전략</h4></a></li>
+			<li><a href="applicate.html" class="idx"><h4>응용</h4></a></li>
+			<li><a href="answer.html" target="_blank"><h4>정답</h4></a></li>
+		</ol>
+		<div>
+			<h3>스도쿠.규칙</h3>
+			<h5><p>스도쿠를 구성하는 칸(cell)은 총 81칸, 3X3칸 9개로 세분화되며, 지켜야 할 룰은 다음과 같다.</p>
+			<div id="ex">
+				<p><ul>
+					<li>각각의 가로줄(row) 세로줄(column)에 1~9가 중복 없이 하나씩 들어간다.</li>
+					<li>3X3칸(box) 안에는 1~9가 중복 없이 하나씩 들어간다.</li>
+				</ul></p>
+			</div>
+			<p>스도쿠를 풀 때 뿐만 아니라 만들 때에도 규칙이 존재한다.<br>
+			위에 언급 된 니코리 출판사는 스토쿠 문제를 만들 때의 규칙을 두 가지 세웠다.<br></p>
+			<div id="create">
+				<p><ul>
+					<li>가능한 정답은 한 개 뿐이다.</li>
+					<li>처음 제시되는 숫자들의 개수는 30개 이하여야 한다.</li>
+					<li>숫자들이 기입되어 있는 모습이 대칭이 되어야 한다.</li>
+				</ul></p>
+			</div>
+			<p>물론 어린이용이나 입문자용 스도쿠에는 81칸 중 47칸 이상의 숫자가 제시 된 것도 있고, 대칭을 지키지 않은 스도쿠도 많이 있다.</p>
+			<p>즉 위의 규칙은 고난이도의 스도쿠를 만들기 위해 존재하는 룰이다.</p>
+			<p>고급 유형의 경우 난이도가 꽤 있다. 어느 시점에서는 두 가지 가능성을 두고 모순을 발견할 때까지 두세 수씩 내다봐야 하는 경우가 생긴다.<br> 보통 셀 좌측상단에 조그맣게 후보 숫자들을 써놓고 여러 기술들(X-Wing, X-Chain, Naked Pair, 등..)을 쓰면서 계속 지워나가며 푼다.<br> 참고로 이 후보 숫자들은 여러 기술들의 기초 재료가 되기 때문에 쓰는 것이 좋다. 아니, 대부분의 고급 기술들은 후보 숫자를 통해 적용시킬 수 있다.</p></h5>
+		</div>
+	</div>
+</body>
+</html>
